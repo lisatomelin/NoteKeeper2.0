@@ -25,7 +25,7 @@
             mat-icon-button
             matTooltip="Editar"
             color="primary"
-            routerLink="/categorias/editar/id"
+            routerLink="/categorias/editar/{{categoria.id}}"
           >
             <mat-icon>edit_note</mat-icon>
           </button>
@@ -33,7 +33,7 @@
             mat-icon-button
             matTooltip="Excluir"
             color="warn"
-            routerLink="/categorias/excluir/id"
+            routerLink="/categorias/excluir/{{categoria.id}}"
           >
             <mat-icon>delete_sweep</mat-icon>
           </button>

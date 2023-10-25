@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Observable, map, switchMap } from 'rxjs';
 import { Categoria } from '../models/categorias';
 import { CategoriasService } from '../services/categorias.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./excluir-categoria.component.scss']
 })
 export class ExcluirCategoriaComponent implements OnInit {
-  categoria$?: Observable<Categoria>
+  categoria$?: Observable<Categoria>;
 
   constructor(private categoriasService: CategoriasService, 
     private route: ActivatedRoute,
@@ -21,14 +21,13 @@ export class ExcluirCategoriaComponent implements OnInit {
   }
 
   confirmar(): void {
+
     const id = parseInt(this.route.snapshot.paramMap.get('id')!);
 
     this.categoriasService.excluir(id).subscribe({
       next: () => this.processarSucesso(),
-       error: (err) => this.processarFalha(err),
-    });
-
-    
+      error: (err) => this.processarFalha(err),
+    });    
   }
 
   processarSucesso(){
