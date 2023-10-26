@@ -19,10 +19,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ExcluirCategoriaComponent
   ],
   imports: [
-    CommonModule,
     CategoriasRoutingModule,
     SharedModule,
-    ReactiveFormsModule,
+    
   ],
   providers: [CategoriasService],
 })

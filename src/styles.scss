@@ -2,3 +2,20 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.snackkar-sucesso {
+  -mdc-nackbar-container-color: #42f675;
+  -mdc-nackbar-supporting-text-color: #000000;
+  --mat-snack-bar-button-color: white;
+}
+
+.snackkar-aviso {
+  -mdc-nackbar-container-color: #e5f502;
+  -mdc-nackbar-supporting-text-color: #000000;
+  --mat-snack-bar-button-color: white;
+}
+
+.snackkar-erro {
+  -mdc-nackbar-container-color:  rgb(245, 88, 88) ;
+  -mdc-nackbar-supporting-text-color: #000000;
+  --mat-snack-bar-button-color: white;
+}
