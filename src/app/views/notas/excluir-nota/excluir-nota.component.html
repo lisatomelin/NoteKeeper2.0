@@ -4,27 +4,25 @@
 
     <p class="fs-5">Você tem certeza que deseja excluir a seguinte nota?</p>
 
-    <mat-list *ngIf="notas$ | async 'nota'">
+    <mat-list *ngIf="notas$ | async as nota">
       <mat-list-item>
         <div class="d-flex justify-content-between">
           <span>Id:</span>
-          <span>0</span>
+          <span>{{ nota.id }}</span>
         </div>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
         <div class="d-flex justify-content-between">
           <span>Título:</span>
-          <span>Lavar o Cachorro</span>
+          <span>{{ nota.titulo }}</span>
         </div>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
         <div class="d-flex justify-content-between">
           <span>Conteúdo:</span>
-          <span
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
-            repellat?</span
+          <span>{{ nota.conteudo}}</span
           >
         </div>
       </mat-list-item>
@@ -32,13 +30,16 @@
       <mat-list-item>
         <div class="d-flex justify-content-between">
           <span>Categoria:</span>
-          <span>Lazer</span>
+          <span>{{ nota.categoria?. titulo}}</span>
         </div>
       </mat-list-item>
     </mat-list>
 
     <div class="d-flex justify-content-end gap-2 mt-5">
-      <button class="py-3 px-5" color="warn" mat-raised-button>
+      <button 
+      (click)="excluir()"
+      class="py-3 px-5" 
+      color="warn" mat-raised-button>
         Confirmar
       </button>
       <button

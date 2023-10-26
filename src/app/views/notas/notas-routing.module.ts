@@ -37,13 +37,13 @@ import { EditarNotaComponent } from './editar-nota/editar-nota.component';
     {
       path: 'editar/:id',
       component: EditarNotaComponent,
-      resolve: { categoria: formsNotaResolver, categorias: listarCategoriasResolver },
+      resolve: { nota: formsNotaResolver, categorias: listarCategoriasResolver },
     },
     {
       path: 'excluir/:id',
       component: ExcluirNotaComponent,
       resolve: { nota: formsNotaResolver },
-    },
+   },
 ];
 
 

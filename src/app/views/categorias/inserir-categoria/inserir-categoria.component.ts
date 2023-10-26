@@ -39,7 +39,7 @@ export class InserirCategoriaComponent implements OnInit {
 
   processarFalha(err:any){
     this.notification.erro(
-      `A categoria ${err.titulo} foi cadastrada com sucesso!`
+      `A categoria ${err.titulo} não foi cadastrada!`
     );
     console.error('Erro:', err);
   }

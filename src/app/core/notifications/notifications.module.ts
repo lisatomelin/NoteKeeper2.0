@@ -13,8 +13,9 @@ import { NotificationService } from './services/notifications.service';
         duration: 5000,
         hotizontalPosition: 'center',
         
-      }
+      },
     },
-    NotificationService],
+    NotificationService,
+  ],
 })
 export class NotificationsModule { }

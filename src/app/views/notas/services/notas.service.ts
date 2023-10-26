@@ -14,10 +14,10 @@ export class NotasService {
     return this.http.post<Nota>(this.NOTAS_API_URL, nota);
   }
 
-  editar(id: number, Nota: Nota): Observable<Nota> {
+  editar(id: number, nota: Nota): Observable<Nota> {
     const url = `${this.NOTAS_API_URL}/${id}`;
 
-    return this.http.put<Nota>(url, Nota);
+    return this.http.put<Nota>(url, nota);
   }
 
   excluir(id: number): Observable<any> {
